@@ -38,7 +38,8 @@ You can also update the automated schedule (cronjob)
 ## Usage 
 
 1. Run the script 
-   **./Monitor.sh**
+   ```bash 
+   ./Monitor.sh
 
 2. Automate with Cron: The script includes a cron job entry to automate execution. It runs every 4 hours by default.
 
