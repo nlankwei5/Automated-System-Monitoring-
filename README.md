@@ -16,7 +16,7 @@ This tool is designed to automatically monitor CPU, memory, and disk usage on a 
 ### Prerequisites
 - **Linux system** with Bash shell.
 - **`mail` utility** for sending email alerts (install with `sudo apt-get install mailutils` on Ubuntu).
-- **AWS CLI** (if you plan to use cloud storage for logs).
+- **AWS CLI** (if you plan to use cloud storage for logs and it is optional)
   
 ### Installation
 1. **Clone the Repository**: Download or clone this project to your Linux system.
