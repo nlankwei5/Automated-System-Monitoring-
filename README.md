@@ -27,12 +27,22 @@ This tool is designed to automatically monitor CPU, memory, and disk usage on a 
 2. Set Up Email Notifications: Configure mail to work with your email service, updating any necessary settings in /etc/mail.rc for external email providers if needed.
 
 ## Configuration  
-You can always open the script and change the threshold levels according to your preference. 
+1. You can always open the script and change the threshold levels according to your preference. 
 - CPU_threshold (default: 90%)
 - Mem_threshold (default: 85%)
 - Disk_threshold (default: 75%)
 
-You can also update the automated schedule (cronjob)
+2. You can also update the automated schedule (cronjob)
+
+3. You can update the the email to be sent alerts when the metrics exceed the threshold. 
+    ```bash 
+    if [ "$dskusage" -gt "$Disk_threshold" ]
+   then 
+    echo "Disk limt exceeded!!!" 1>>$logfile
+    mail -s "Disk Limit Alert" email@address.com <<< "Disk usage has exceeded Limit. Kindly review"
+   fi 
+
+   Apply same to the other metrics. 
 
 
 ## Usage 
@@ -54,4 +64,4 @@ You can also update the automated schedule (cronjob)
 System metrics are stored in /var/log/sysmonitor.log by default. Timestamps accompany each entry to track the time of each log.
 
 
-Feel free to contribute or open issues for improvements.
+### Feel free to contribute or open issues for improvements.
